@@ -15,12 +15,6 @@ Static website for Sirix — garage box rental at Garage Park Soest.
 - **Preview URL:** https://sirix-nl.pages.dev
 - **Live URL:** https://sirix.nl
 
-## DNS
-
-Managed in Cloudflare. Key records:
-- `CNAME sirix.nl → sirix-nl.pages.dev` (Proxied)
-- MX records pointing to Zoho (mx.zoho.eu, mx2.zoho.eu, mx3.zoho.eu)
-
 ## Content
 
 Bilingual (NL/EN) — language toggle in the header switches between Dutch and English.
