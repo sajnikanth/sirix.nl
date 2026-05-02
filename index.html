@@ -30,7 +30,7 @@
       position: absolute;
       inset: -12px;
       background: url('hero.jpg') center/cover no-repeat;
-      filter: blur(6px);
+      filter: blur(2px);
     }
 
     header {
@@ -75,6 +75,9 @@
       margin: 0 auto;
       padding: 48px 32px;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .intro {
@@ -100,8 +103,8 @@
     .box-list {
       list-style: none;
       display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 6px;
     }
 
     .box-list li {
