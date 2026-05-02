@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sirix verhuurt garageboxen bij Garage Park Soest. Garage storage box rental in Soest, Netherlands.">
   <title>Sirix — Garagebox verhuur</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,7 +36,6 @@
     .lang-toggle {
       display: flex;
       gap: 8px;
-      font-size: 13px;
     }
 
     .lang-toggle button {
@@ -105,11 +105,10 @@
     .contact a {
       color: #2d6a4f;
       font-weight: 600;
-      text-decoration: none;
     }
 
     .contact a:hover {
-      text-decoration: underline;
+      opacity: 0.8;
     }
 
     footer {
@@ -131,8 +130,8 @@
   <header>
     <h1>Sirix</h1>
     <div class="lang-toggle">
-      <button id="btn-nl" class="active" onclick="setLang('nl')">NL</button>
-      <button id="btn-en" onclick="setLang('en')">EN</button>
+      <button id="btn-nl" class="active" aria-pressed="true" onclick="setLang('nl')">NL</button>
+      <button id="btn-en" aria-pressed="false" onclick="setLang('en')">EN</button>
     </div>
   </header>
 
@@ -171,6 +170,8 @@
       document.querySelectorAll('.en').forEach(el => el.hidden = lang !== 'en');
       document.getElementById('btn-nl').classList.toggle('active', lang === 'nl');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-nl').setAttribute('aria-pressed', lang === 'nl');
+      document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
       document.documentElement.lang = lang;
     }
   </script>
