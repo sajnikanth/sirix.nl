@@ -21,15 +21,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 32px;
-      border-bottom: 1px solid #e0e0e0;
-      background: white;
+      padding: 32px 32px;
+      min-height: 220px;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;
     }
 
     header h1 {
       font-size: 20px;
       font-weight: 700;
-      color: #1a1a1a;
+      color: white;
       letter-spacing: 0.5px;
     }
 
@@ -44,11 +46,11 @@
       cursor: pointer;
       padding: 4px 8px;
       border-radius: 3px;
-      color: #555;
+      color: rgba(255,255,255,0.7);
     }
 
     .lang-toggle button.active {
-      background: #2d6a4f;
+      background: rgba(255,255,255,0.2);
       color: white;
       font-weight: 600;
     }
@@ -119,7 +121,7 @@
     }
 
     @media (max-width: 480px) {
-      header { padding: 16px 20px; }
+      header { padding: 24px 20px; min-height: 160px; }
       main { padding: 32px 20px; }
     }
   </style>
